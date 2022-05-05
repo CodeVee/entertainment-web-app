@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookmarkedComponent implements OnInit {
 
+  placeholder = 'Search for bookmarked shows';
+  search = '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateSearch(text: string): void {
+    this.search = text;
   }
 
 }

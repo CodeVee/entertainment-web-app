@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TvSeriesComponent implements OnInit {
 
+  placeholder = 'Search for TV series';
+  search = '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateSearch(text: string): void {
+    this.search = text;
   }
 
 }

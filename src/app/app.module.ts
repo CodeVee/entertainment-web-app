@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { BigThumbnailComponent } from './components/big-thumbnail/big-thumbnail.
 import { SmallThumbnailComponent } from './components/small-thumbnail/small-thumbnail.component';
 import { BookmarkComponent } from './components/bookmark/bookmark.component';
 import { ButtonComponent } from './components/button/button.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { ButtonComponent } from './components/button/button.component';
     BigThumbnailComponent,
     SmallThumbnailComponent,
     BookmarkComponent,
-    ButtonComponent
+    ButtonComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,42 @@
+@use 'colors' as c;
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+
+  > img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .line {
+    width: calc(100% - 5.6rem);
+    border-bottom: 1px solid c.$gray-blue;
+    margin-left: auto;
+    visibility: hidden;
+  }
+
+  .search {
+    flex: 1;
+    margin-left: 2.4rem;
+    border: none;
+    background: transparent;
+    color: c.$white;
+    caret-color: c.$soft-red;
+    outline: none;
+    margin-bottom: 1.4rem;
+    cursor: pointer;
+
+    &::placeholder {
+      color: c.$white;
+      opacity: .5;
+    }
+
+    &:focus + .line {
+      visibility: visible;
+    }
+  }
+
+
+
+}
