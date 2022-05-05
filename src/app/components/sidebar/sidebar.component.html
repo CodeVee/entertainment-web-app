@@ -1,1 +1,25 @@
-<p>sidebar works!</p>
+
+<div class="sidebar">
+  <img src="assets/logo.svg" alt="logo">
+  <div class="sidebar__links">
+    <a routerLink="home" routerLinkActive #home="routerLinkActive">
+      <img *ngIf="!home.isActive" src="assets/icon-nav-home.svg" alt="home">
+      <img *ngIf="home.isActive" src="assets/icon-nav-home-active.svg" alt="home-active">
+    </a>
+    <a routerLink="movies" routerLinkActive #movies="routerLinkActive">
+      <img *ngIf="!movies.isActive" src="assets/icon-nav-movies.svg" alt="movies">
+      <img *ngIf="movies.isActive" src="assets/icon-nav-movies-active.svg" alt="movies-active">
+    </a>
+    <a routerLink="tv-series" routerLinkActive #tvseries="routerLinkActive">
+      <img *ngIf="!tvseries.isActive" src="assets/icon-nav-tv-series.svg" alt="tv-series">
+      <img *ngIf="tvseries.isActive" src="assets/icon-nav-tv-series-active.svg" alt="tv-series-active">
+    </a>
+    <a routerLink="bookmarked" routerLinkActive #bookmark="routerLinkActive">
+      <img *ngIf="!bookmark.isActive" src="assets/icon-nav-bookmark.svg" alt="bookmark">
+      <img *ngIf="bookmark.isActive" src="assets/icon-nav-bookmark-active.svg" alt="bookmark-active">
+    </a>
+  </div>
+  <div class="sidebar__avatar">
+    <img src="assets/image-avatar.png" alt="avatar">
+  </div>
+</div>

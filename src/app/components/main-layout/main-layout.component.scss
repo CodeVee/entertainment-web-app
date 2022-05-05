@@ -1,0 +1,19 @@
+.layout {
+  padding: {
+    top: 3.2rem;
+    left: 3.2rem;
+  };
+  min-height: 100vh;
+  display: grid;
+  gap: 3.6rem;
+  grid-template-columns: 9.6rem auto;
+}
+
+.aside {
+  max-height: 96rem;
+  margin-bottom: 3.2rem;
+}
+
+.main {
+  background: blue;
+}

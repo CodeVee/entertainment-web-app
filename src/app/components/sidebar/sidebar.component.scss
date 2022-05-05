@@ -1,0 +1,45 @@
+@use 'colors' as c;
+
+
+.sidebar {
+  background: c.$deep-blue;
+  height: calc(100vh - 6.4rem);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: {
+    top: 3.5rem;
+    bottom: 3.2rem;
+  };
+
+  & > img {
+    width: 3.186rem;
+    height: 3.214rem;
+  }
+
+  &__links {
+    height: 20rem;
+    width: 2rem;
+    margin: {
+      top: 7.5rem;
+      bottom: auto;
+    };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid c.$white;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+
+}
