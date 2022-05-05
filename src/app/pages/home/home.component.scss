@@ -1,0 +1,26 @@
+.trending {
+  margin: 2rem auto 4rem;
+
+  .wrapper {
+    margin-top: 2.5rem;
+    margin-right: -3.6rem;
+    padding-right: 3.6rem;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    .video:not(:first-child) {
+      margin-left: 4rem;
+    }
+  }
+}
+
+.recommended {
+
+  .wrapper {
+    margin-top: 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem 3.2rem;
+  }
+}

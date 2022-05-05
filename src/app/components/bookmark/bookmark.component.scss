@@ -1,0 +1,35 @@
+@use 'colors' as c;
+
+.bookmark {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: c.$dark-blue;
+  opacity: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .inactive {
+    display: none;
+  }
+
+  &:hover {
+    background: c.$white;
+    opacity: 1;
+
+    .inactive {
+      display: inline-block;
+    }
+
+    .active {
+      display: none;
+    }
+  }
+}

@@ -1,1 +1,16 @@
-<p>big-thumbnail works!</p>
+<div class="thumbnail" style="background-image: url({{video.thumbnail.trending.large}});">
+  <app-play-mask class="play-mask"></app-play-mask>
+  <app-bookmark class="index-1" [bookmarked]="video.isBookmarked" (changed)="updateVideo($event)"></app-bookmark>
+  <div class="info index-1">
+    <div class="details">
+      <small class="body body-md">{{video.year}}</small>
+      <span>.</span>
+      <img *ngIf="isMovie" src="assets/icon-category-movie.svg" alt="movie">
+      <img *ngIf="!isMovie" src="assets/icon-category-tv.svg" alt="tv">
+      <small class="body body-md">{{video.category}}</small>
+      <span>.</span>
+      <small class="body body-md">{{video.rating}}</small>
+    </div>
+    <h3 class="heading heading-sm">{{video.title}}</h3>
+  </div>
+</div>

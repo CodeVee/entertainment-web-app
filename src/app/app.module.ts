@@ -11,6 +11,7 @@ import { SmallThumbnailComponent } from './components/small-thumbnail/small-thum
 import { BookmarkComponent } from './components/bookmark/bookmark.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { PlayMaskComponent } from './components/play-mask/play-mask.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     SmallThumbnailComponent,
     BookmarkComponent,
     ButtonComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    PlayMaskComponent
   ],
   imports: [
     BrowserModule,

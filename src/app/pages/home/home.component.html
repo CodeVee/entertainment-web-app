@@ -1,2 +1,13 @@
-<p style="color: white;">{{search}}</p>
 <app-search-bar [placeholder]="placeholder" (textChanged)="updateSearch($event)"></app-search-bar>
+<div class="trending">
+  <h2 class="heading heading-lg">Trending</h2>
+  <div class="wrapper">
+    <app-big-thumbnail class="video" *ngFor="let video of trendingVideos" [video]="video"></app-big-thumbnail>
+  </div>
+</div>
+<div class="recommended">
+  <h2 class="heading heading-lg">Recommended for you</h2>
+  <div class="wrapper">
+    <app-small-thumbnail class="video" *ngFor="let video of recommendedVideos" [video]="video"></app-small-thumbnail>
+  </div>
+</div>

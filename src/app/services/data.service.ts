@@ -12,7 +12,7 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  getJSON(): Observable<Video[]> {
+  getVideos(): Observable<Video[]> {
     if (this.videos.length) {
       return of(this.videos);
     }
