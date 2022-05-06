@@ -3,20 +3,24 @@
   <img src="assets/logo.svg" alt="logo">
   <div class="sidebar__links">
     <a routerLink="home" routerLinkActive #home="routerLinkActive">
-      <img *ngIf="!home.isActive" src="assets/icon-nav-home.svg" alt="home">
-      <img *ngIf="home.isActive" src="assets/icon-nav-home-active.svg" alt="home-active">
+      <img class="show" *ngIf="!home.isActive" src="assets/icon-nav-home.svg" alt="home">
+      <img class="show" *ngIf="home.isActive" src="assets/icon-nav-home-active.svg" alt="home-active">
+      <img class="hover" src="assets/icon-nav-home-hover.svg" alt="home-hover">
     </a>
     <a routerLink="movies" routerLinkActive #movies="routerLinkActive">
-      <img *ngIf="!movies.isActive" src="assets/icon-nav-movies.svg" alt="movies">
-      <img *ngIf="movies.isActive" src="assets/icon-nav-movies-active.svg" alt="movies-active">
+      <img class="show" *ngIf="!movies.isActive" src="assets/icon-nav-movies.svg" alt="movies">
+      <img class="show" *ngIf="movies.isActive" src="assets/icon-nav-movies-active.svg" alt="movies-active">
+      <img class="hover" src="assets/icon-nav-movies-hover.svg" alt="movies-hover">
     </a>
     <a routerLink="tv-series" routerLinkActive #tvseries="routerLinkActive">
-      <img *ngIf="!tvseries.isActive" src="assets/icon-nav-tv-series.svg" alt="tv-series">
-      <img *ngIf="tvseries.isActive" src="assets/icon-nav-tv-series-active.svg" alt="tv-series-active">
+      <img class="show" *ngIf="!tvseries.isActive" src="assets/icon-nav-tv-series.svg" alt="tv-series">
+      <img class="show" *ngIf="tvseries.isActive" src="assets/icon-nav-tv-series-active.svg" alt="tv-series-active">
+      <img class="hover" src="assets/icon-nav-tv-series-hover.svg" alt="tv-series-hover">
     </a>
     <a routerLink="bookmarked" routerLinkActive #bookmark="routerLinkActive">
-      <img *ngIf="!bookmark.isActive" src="assets/icon-nav-bookmark.svg" alt="bookmark">
-      <img *ngIf="bookmark.isActive" src="assets/icon-nav-bookmark-active.svg" alt="bookmark-active">
+      <img class="show" *ngIf="!bookmark.isActive" src="assets/icon-nav-bookmark.svg" alt="bookmark">
+      <img class="show" *ngIf="bookmark.isActive" src="assets/icon-nav-bookmark-active.svg" alt="bookmark-active">
+      <img class="hover" src="assets/icon-nav-bookmark-hover.svg" alt="bookmark-hover">
     </a>
   </div>
   <div class="sidebar__avatar">

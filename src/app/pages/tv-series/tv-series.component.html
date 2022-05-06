@@ -1,2 +1,15 @@
-<p style="color: white;">{{search}}</p>
 <app-search-bar [placeholder]="placeholder" (textChanged)="updateSearch($event)"></app-search-bar>
+<div class="recommended">
+  <ng-container *ngIf="!showFiltered">
+    <h2 class="heading heading-lg">Tv Series</h2>
+    <div class="thumb-grid mt-38">
+      <app-small-thumbnail class="video" *ngFor="let video of tvSeries" [video]="video"></app-small-thumbnail>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="showFiltered">
+    <h2 class="heading heading-lg">Found {{filteredTvSeries.length}} result{{filteredTvSeries.length > 1 ? 's' : ''}} for '{{search}}'</h2>
+    <div class="thumb-grid mt-38">
+      <app-small-thumbnail class="video" *ngFor="let video of filteredTvSeries" [video]="video"></app-small-thumbnail>
+    </div>
+  </ng-container>
+</div>

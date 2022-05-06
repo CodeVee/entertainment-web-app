@@ -28,6 +28,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    a {
+      .hover {
+        display: none;
+      }
+
+      &:hover {
+        .hover {
+          display: inline;
+        }
+
+        .show {
+          display: none;
+        }
+      }
+    }
   }
 
   &__avatar {
