@@ -1,0 +1,33 @@
+<div class="auth">
+  <img src="assets/logo.svg" alt="logo" class="logo">
+  <div class="auth__form">
+    <h2 class="heading heading-lg">{{loginPage ? 'Login' : 'Signup'}}</h2>
+    <form [formGroup]="authForm" (ngSubmit)="submit()">
+      <div class="auth__input">
+        <input [ngClass]="{'invalid': emailInvalid}" placeholder="Email address" formControlName="email" type="email" class="body body-md">
+        <span class="auth__error body body-sm" *ngIf="emailInvalid && emailCtrl.errors?.required">Can't be empty</span>
+        <span class="auth__error body body-sm" *ngIf="emailInvalid && emailCtrl.errors?.email">Invalid email</span>
+      </div>
+      <div class="auth__input">
+        <input [ngClass]="{'invalid': passwordInvalid}" placeholder="Password" formControlName="password" type="password" class="body body-md">
+        <span class="auth__error body body-sm" *ngIf="passwordInvalid && passwordCtrl.errors?.required">Can't be empty</span>
+      </div>
+      <div class="auth__input" *ngIf="signupPage">
+        <input [ngClass]="{'invalid': confirmInvalid}" placeholder="Repeat password" formControlName="confirmPassword" type="password" class="body body-md">
+        <span class="auth__error body body-sm" *ngIf="confirmInvalid && confirmCtrl.errors?.required">Can't be empty</span>
+        <span class="auth__error body body-sm" *ngIf="!confirmInvalid && authForm.errors?.notSame">Password don't match</span>
+      </div>
+      <app-button [btnName]="btnName" [disabled]="authForm.invalid" [loading]="loading"></app-button>
+    </form>
+    <div class="auth__link body body-md">
+      <ng-container *ngIf="loginPage">
+        <span>Don't have an account?</span>
+        <a routerLink="/signup">Sign Up</a>
+      </ng-container>
+      <ng-container *ngIf="signupPage">
+        <span>Already have an account?</span>
+        <a routerLink="/login">Login</a>
+      </ng-container>
+    </div>
+  </div>
+</div>

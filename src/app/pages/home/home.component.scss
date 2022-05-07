@@ -9,6 +9,10 @@
     overflow-x: scroll;
     scrollbar-width: none;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .video:not(:first-child) {
       margin-left: 4rem;
     }

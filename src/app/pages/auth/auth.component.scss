@@ -1,0 +1,84 @@
+@use 'colors' as c;
+
+.auth {
+  padding-top: 7.841rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  &__form {
+    background: c.$deep-blue;
+    margin-top: 8.299rem;
+    padding: 3.2rem;
+    width: 40rem;
+    min-height: 37.3rem;
+    border-radius: 2rem;
+
+    form {
+      margin: 4rem 0 2.4rem;
+    }
+  }
+
+  &__input {
+    margin-bottom: 2.4rem;
+    position: relative;
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+
+    input {
+      height: 3.7rem;
+      width: 100%;
+      background: transparent;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid c.$gray-blue;
+      caret-color: c.$soft-red;
+      padding-left: 1.6rem;
+      padding-bottom: 1.8rem;
+      cursor: pointer;
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: c.$white;
+      }
+
+      &::placeholder {
+        color: c.$white;
+        opacity: .5;
+      }
+
+      &:focus {
+        border-bottom-color: c.$white;
+      }
+
+
+      &.invalid {
+        border-bottom-color: c.$soft-red;
+      }
+    }
+  }
+
+  &__error {
+    color: c.$soft-red;
+    position: absolute;
+    right: 1.6rem;
+  }
+
+
+
+  &__link {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: c.$soft-red;
+      text-decoration: none;
+      margin-left: .9rem;
+    }
+  }
+}
