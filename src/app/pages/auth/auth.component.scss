@@ -82,3 +82,17 @@
     }
   }
 }
+
+@media screen and (max-width: 414px) {
+  .auth {
+    padding-top: 4.8rem;
+
+    &__form {
+      margin-top: 5.84rem;
+      width: 32.7rem;
+      padding: 2.4;
+      min-height: 36.5rem;
+      border-radius: 1rem;
+    }
+  }
+}

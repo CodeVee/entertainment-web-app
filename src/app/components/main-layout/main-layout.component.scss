@@ -17,3 +17,27 @@
   padding: 3.2rem 3.6rem;
 }
 
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: {
+      top: 2.3rem;
+      left: 2.5rem;
+      right: 2.4rem;
+      bottom: 2.3rem;
+    };
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    max-height: auto;
+    margin-bottom: 3.3rem;
+  }
+
+  .main {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+}

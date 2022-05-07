@@ -59,3 +59,34 @@
 
 
 }
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    height: 7.2rem;
+    border-radius: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.4rem;
+
+    & > img {
+      width: 3.2rem;
+      height: 2.56rem;
+    }
+
+    &__links {
+      height: 2rem;
+      width: 17.292rem;
+      margin: 0;
+      flex-direction: row;
+    }
+
+    &__avatar {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+}
