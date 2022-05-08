@@ -1,0 +1,8 @@
+<div class="bookmark">
+  <div class="wrapper" (click)="updateBookmark()">
+    <div class="inner-mask"></div>
+    <img class="active" *ngIf="!bookmarked" src="assets/icon-bookmark-empty.svg" alt="bookmark">
+    <img class="active" *ngIf="bookmarked" src="assets/icon-bookmark-full.svg" alt="bookmark">
+    <img class="inactive" src="assets/icon-bookmark-hover.svg" alt="bookmark">
+  </div>
+</div>

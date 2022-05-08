@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+}
+
+.heading {
+
+  color: white;
+
+  &-lg {
+    font-size: 3.2rem;
+    font-weight: 300;
+  }
+
+  &-md {
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+
+  &-sm {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &-xs {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+}
+
+
+.body {
+  color: white;
+
+  &-md {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  &-sm {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: .75;
+  }
+
+}
+
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem 3.2rem;
+}
+
+.mt-38 {
+  margin-top: 3.8rem;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  html, body {
+      font-size: 8.89px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+      font-size: 10px;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 2.4rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html, body {
+      font-size: 11.04px;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1.6rem;
+  }
+
+  .heading-lg {
+    font-size: 2rem;
+  }
+
+  .mt-38 {
+    margin-top: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  html, body {
+      font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html, body {
+      font-size: 8.53px;
+  }
+}

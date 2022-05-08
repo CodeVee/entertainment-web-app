@@ -1,0 +1,21 @@
+<app-search-bar [placeholder]="placeholder" (textChanged)="updateSearch($event)"></app-search-bar>
+<div class="trending" *ngIf="!showFiltered">
+  <h2 class="heading heading-lg">Trending</h2>
+  <div class="wrapper">
+    <app-big-thumbnail class="video" *ngFor="let video of trendingVideos" [video]="video"></app-big-thumbnail>
+  </div>
+</div>
+<div class="recommended">
+  <ng-container *ngIf="!showFiltered">
+    <h2 class="heading heading-lg">Recommended for you</h2>
+    <div class="thumb-grid mt-32">
+      <app-small-thumbnail class="video" *ngFor="let video of recommendedVideos" [video]="video"></app-small-thumbnail>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="showFiltered">
+    <h2 class="heading heading-lg">Found {{filteredVideos.length}} result{{filteredVideos.length > 1 ? 's' : ''}} for '{{search}}'</h2>
+    <div class="thumb-grid mt-32">
+      <app-small-thumbnail class="video" *ngFor="let video of filteredVideos" [video]="video"></app-small-thumbnail>
+    </div>
+  </ng-container>
+</div>

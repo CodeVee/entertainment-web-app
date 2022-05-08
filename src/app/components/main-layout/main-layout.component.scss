@@ -1,0 +1,54 @@
+.layout {
+  padding: {
+    top: 3.2rem;
+    left: 3.2rem;
+  };
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 9.6rem calc(100% - 9.6rem);
+}
+
+.aside {
+  max-height: 96rem;
+  margin-bottom: 3.2rem;
+}
+
+.main {
+  padding: 3.2rem 3.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: {
+      top: 2.3rem;
+      left: 2.5rem;
+      right: 2.4rem;
+      bottom: 2.3rem;
+    };
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside {
+    max-height: initial;
+    margin-bottom: 3.3rem;
+  }
+
+  .main {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .layout {
+    padding: 0;
+  }
+
+  .aside {
+    margin-bottom: 2.4rem;
+  }
+
+  .main {
+    padding: 0 1.6rem 1.6rem;
+  }
+}

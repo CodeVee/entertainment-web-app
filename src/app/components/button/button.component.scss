@@ -1,0 +1,57 @@
+@use 'colors' as c;
+
+.btn {
+  background: c.$soft-red;
+  border-radius: .6rem;
+  width: 100%;
+  padding: 1.5rem 0;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    background: c.$white;
+    color: c.$deep-blue;
+  }
+
+  &:disabled {
+    cursor: default;
+    background: c.$soft-red;
+    color: c.$white;
+    opacity: .5;
+  }
+
+  &--loading {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1.6rem;
+      height: 1.6rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border: .4rem solid transparent;
+      border-radius: 50%;
+      border-top-color: c.$white;
+      animation: button-loading-spinner 1s ease infinite;
+    }
+
+    span {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes button-loading-spinner {
+  from {
+      transform: rotate(0turn);
+  }
+
+  to {
+      transform: rotate(1turn);
+  }
+}

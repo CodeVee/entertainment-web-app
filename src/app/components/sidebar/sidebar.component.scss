@@ -1,0 +1,111 @@
+@use 'colors' as c;
+
+
+.sidebar {
+  background: c.$deep-blue;
+  height: calc(100vh - 6.4rem);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: {
+    top: 3.5rem;
+    bottom: 3.2rem;
+  };
+
+  & > img {
+    width: 3.186rem;
+    height: 3.214rem;
+  }
+
+  &__links {
+    height: 20rem;
+    width: 2rem;
+    margin: {
+      top: 7.5rem;
+      bottom: auto;
+    };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    a {
+      .hover {
+        display: none;
+      }
+
+      &:hover {
+        .hover {
+          display: inline;
+        }
+
+        .show {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid c.$white;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    height: 7.2rem;
+    border-radius: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.4rem;
+
+    & > img {
+      width: 3.2rem;
+      height: 2.56rem;
+    }
+
+    &__links {
+      height: 2rem;
+      width: 17.292rem;
+      margin: 0;
+      flex-direction: row;
+    }
+
+    &__avatar {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .sidebar {
+    height: 5.6rem;
+    border-radius: 0;
+    padding: 1.8rem 1.6rem;
+
+    & > img {
+      width: 2.5rem;
+      height: 2rem;
+    }
+
+    &__links {
+      height: 1.6rem;
+      width: 13.354rem;
+    }
+
+    &__avatar {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

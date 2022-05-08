@@ -1,0 +1,65 @@
+@use 'colors' as c;
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.9rem;
+
+  > img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .line {
+    width: calc(100% - 5.6rem);
+    border-bottom: 1px solid c.$gray-blue;
+    margin-left: auto;
+    visibility: hidden;
+  }
+
+  .search {
+    flex: 1;
+    margin-left: 2.4rem;
+    border: none;
+    background: transparent;
+    caret-color: c.$soft-red;
+    outline: none;
+    margin-bottom: 1.4rem;
+    cursor: pointer;
+
+    &::placeholder {
+      color: c.$white;
+      opacity: .5;
+    }
+
+    &:focus + .line {
+      visibility: visible;
+    }
+  }
+
+}
+
+@media screen and (max-width: 414px) {
+  .bar {
+    margin-bottom: 1.9rem;
+
+    > img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    .line {
+      width: calc(100% - 4.8rem);
+    }
+
+    .search {
+      margin-left: 2.4rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .heading-md {
+      font-size: 1.6rem;
+    }
+
+  }
+}
