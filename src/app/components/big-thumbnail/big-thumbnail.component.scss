@@ -61,5 +61,25 @@
 }
 
 @media screen and (max-width: 414px) {
+  .thumbnail {
+    width: 24rem;
+    height: 14rem;
+    padding: .8rem .8rem 1.6rem;
 
+    .info {
+      height: 3.8rem;
+    }
+
+    .details {
+      height: 1.5rem;
+    }
+
+    .body-md {
+      font-size: 1.2rem;
+    }
+
+    .heading-sm {
+      font-size: 1.5rem;
+    }
+  }
 }

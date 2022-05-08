@@ -36,5 +36,17 @@
 }
 
 @media screen and (max-width: 414px) {
+  .trending {
+    margin: 0 auto 2.4rem;
 
+    .wrapper {
+      margin-right: -1.6rem;
+      padding-right: 1.6rem;
+      width: calc(100vw - 1.6rem);
+
+      .video:not(:first-child) {
+        margin-left: 1.6rem;
+      }
+    }
+  }
 }

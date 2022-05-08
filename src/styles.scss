@@ -92,12 +92,20 @@ html, body {
   }
 
   .thumb-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem 1.6rem;
+  }
+
+  .heading-lg {
+    font-size: 2rem;
+  }
+
+  .mt-38 {
+    margin-top: 2.4rem;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   html, body {
       font-size: 10px;
   }

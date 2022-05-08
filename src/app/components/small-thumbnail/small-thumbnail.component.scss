@@ -60,37 +60,36 @@
     width: 22rem;
     height: 14rem;
   }
-
-  .info {
-    height: 4.4rem;
-    margin-top: .8rem;
-  }
-
-  .details {
-    height: 1.9rem;
-    margin-bottom: .3rem;
-    display: flex;
-    align-items: center;
-
-    img {
-      margin-right: 3px;
-    }
-
-    small {
-      opacity: .75;
-    }
-
-    span {
-      margin: 0 .8rem;
-      align-self: flex-start;
-    }
-  }
-
-  .index-1 {
-    z-index: 1;
-  }
 }
 
 @media screen and (max-width: 414px) {
+  .thumbnail {
+    width: 16.4rem;
+    height: 11rem;
+    padding: .8rem;
+  }
 
+  .heading-xs {
+    font-size: 1.4rem;
+  }
+
+  .body-sm {
+    font-size: 1.1rem;
+  }
+
+  .info {
+    height: 3.6rem;
+  }
+
+  .details {
+    height: 1.3rem;
+
+    img {
+      margin-right: .4rem;
+    }
+
+    span {
+      margin: 0 .6rem;
+    }
+  }
 }

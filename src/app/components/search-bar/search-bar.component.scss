@@ -37,6 +37,29 @@
     }
   }
 
+}
 
+@media screen and (max-width: 414px) {
+  .bar {
+    margin-bottom: 1.9rem;
 
+    > img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    .line {
+      width: calc(100% - 4.8rem);
+    }
+
+    .search {
+      margin-left: 2.4rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .heading-md {
+      font-size: 1.6rem;
+    }
+
+  }
 }
